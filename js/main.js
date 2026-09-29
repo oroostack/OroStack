@@ -9,7 +9,14 @@ if (menuToggle && navLinks) {
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
+      // En móvil, tocar Servicios/Proyectos solo abre su desplegable.
+      // El menú principal permanece abierto para poder elegir una opción.
+      if (window.innerWidth <= 680 && link.classList.contains('nav-dropdown-trigger')) return;
+
       navLinks.classList.remove('open');
+      navLinks.querySelectorAll('.nav-dropdown.mobile-open').forEach(dropdown => {
+        dropdown.classList.remove('mobile-open');
+      });
       menuToggle.setAttribute('aria-expanded', 'false');
     });
   });

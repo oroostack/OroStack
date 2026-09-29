@@ -535,3 +535,31 @@ button { cursor: pointer; }
   .projects-list .project-info { min-height: auto; }
   .projects-list .project-info p { min-height: auto; }
 }
+
+
+/* ===== Ajustes móviles finales ===== */
+@media (max-width: 680px) {
+  /* Servicios: el CTA deja de estar superpuesto al contenido. */
+  .service-card {
+    min-height: 0;
+    padding-bottom: 30px;
+  }
+  .service-card > a {
+    position: static;
+    display: inline-block;
+    margin-top: 24px;
+  }
+
+  /* Footer más compacto en pantallas pequeñas, sin alterar escritorio. */
+  .footer-main {
+    padding: 30px 0 24px;
+    gap: 24px;
+  }
+  .footer-links {
+    gap: 24px;
+  }
+  .footer-bottom {
+    padding: 11px 0;
+    gap: 4px;
+  }
+}
