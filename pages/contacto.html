@@ -79,7 +79,13 @@
           </div>
         </div>
 
-        <form class="contact-form reveal delay-1" id="contactForm" novalidate>
+        <form class="contact-form reveal delay-1" id="contactForm"
+      action="https://formsubmit.co/oroostack@gmail.com"
+      method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nueva consulta OroStack">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://orostack.es/pages/contacto.html?enviado=1">
           <div class="form-row">
             <label>Nombre <span class="required">*</span><input type="text" name="nombre" placeholder="Tu nombre" required></label>
             <label>Empresa <input type="text" name="empresa" placeholder="Tu negocio"></label>
@@ -103,7 +109,7 @@
           </label>
           <label class="check"><input type="checkbox" name="consentimiento" value="aceptado" required><span><b class="required">*</b> Acepto que OroStack utilice estos datos para responder a mi consulta.</span></label>
           <button type="submit" class="btn btn-primary submit-btn">Enviar consulta <span>↗</span></button>
-          <p class="form-disclaimer"><span class="required">*</span> Campo obligatorio. Empresa es opcional.<br>La consulta se enviará directamente a OroStack sin abrir Outlook.</p>
+          <p class="form-disclaimer"><span class="required">*</span> Campo obligatorio. Empresa es opcional.<br>La consulta se enviará directamente a OroStack.</p>
           <div class="form-success" id="formSuccess">¡Perfecto! Se ha preparado el correo con tu consulta.</div>
         </form>
       </div>
