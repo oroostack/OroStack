@@ -56,7 +56,8 @@ if (contactForm) {
     const subject = `Nueva consulta OroStack — ${servicio}`;
     data.append('_subject', subject);
     data.append('_template', 'table');
-    data.append('_captcha', 'true');
+    data.append('_captcha', 'false');
+    data.append('_url', window.location.href);
 
     try {
       // FormSubmit permite enviar formularios estáticos por AJAX, sin abrir Outlook.
