@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con OroStack para hablar sobre tu web, app o proyecto de software.">
+  <title>OroStack</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png?v=9">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png?v=9">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png?v=9">
+  <link rel="shortcut icon" href="../assets/favicon.ico?v=9">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=9">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="../index.html"><span class="brand-mark"><img src="../assets/logo-mark.png" alt=""></span><span>Oro<span class="accent">Stack</span></span></a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html#inicio">Inicio</a>
+        <div class="nav-dropdown">
+          <a href="../index.html#servicios" class="nav-dropdown-trigger">Servicios <span class="chevron" aria-hidden="true"></span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-all" href="../index.html#servicios"><strong>Ver todos los servicios</strong><small>Ir a la sección principal</small></a>
+            <a href="servicios/servicio-web.html"><strong>Desarrollo web</strong><small>Webs, landing pages y reservas</small></a>
+            <a href="servicios/servicio-apps.html"><strong>Aplicaciones</strong><small>Apps Android y soluciones móviles</small></a>
+            <a href="servicios/servicio-software.html"><strong>Software</strong><small>Programas y herramientas a medida</small></a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="../index.html#proyectos" class="nav-dropdown-trigger">Proyectos <span class="chevron" aria-hidden="true"></span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-all" href="../index.html#proyectos"><strong>Ver todos los proyectos</strong><small>Ir a la sección principal</small></a>
+            <a href="proyectos/proyecto-studio-hair.html"><strong>Studio Hair</strong><small>Web + reservas</small></a>
+            <a href="proyectos/proyecto-mare-cucina.html"><strong>Mare Cucina</strong><small>Web corporativa</small></a>
+            <a href="proyectos/proyecto-northfit.html"><strong>NorthFit</strong><small>Web + app</small></a>
+          </div>
+        </div>
+        <a href="../index.html#sobre-mi">Sobre mí</a>
+        <a href="contacto.html" class="nav-cta active">Hablemos <span>→</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <span class="section-label">05 / Contacto</span>
+        <h1>Vamos a crear<br><span>algo juntos.</span></h1>
+        <p>Cuéntame qué tienes en mente. No hace falta que tengas todo pensado: con una idea y unas líneas me basta para empezar.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <span class="contact-icon">✦</span>
+            <small>EMAIL</small>
+            <a href="mailto:oroostack@gmail.com">oroostack@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">⌖</span>
+            <small>UBICACIÓN</small>
+            <strong>Oropesa del Mar · Castellón</strong>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">↗</span>
+            <small>REDES</small>
+            <div class="social-links">
+              <a href="https://www.instagram.com/orostack/" target="_blank" rel="noopener">Instagram <span>↗</span></a>
+              <a href="https://www.tiktok.com/@orostack" target="_blank" rel="noopener">TikTok <span>↗</span></a>
+            </div>
+          </div>
+          <div class="contact-note">
+            <strong>¿No sabes exactamente qué necesitas?</strong>
+            <p>Sin problema. Cuéntame qué quieres conseguir y te ayudo a pensar una solución.</p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal delay-1" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>Nombre <span class="required">*</span><input type="text" name="nombre" placeholder="Tu nombre" required></label>
+            <label>Empresa <input type="text" name="empresa" placeholder="Tu negocio"></label>
+          </div>
+          <div class="form-row">
+            <label>Email <span class="required">*</span><input type="email" name="email" placeholder="tu@email.com" required></label>
+            <label>Teléfono <span class="required">*</span><input type="tel" name="telefono" id="telefono" placeholder="+34 600 000 000" inputmode="tel" autocomplete="tel" maxlength="20" required aria-describedby="telefonoAyuda">
+              <small class="field-help" id="telefonoAyuda">7–15 dígitos. Puedes usar +, espacios o guiones.</small></label>
+          </div>
+          <label>¿Qué necesitas? <span class="required">*</span>
+            <select name="servicio" id="servicio" required>
+              <option value="">Selecciona una opción</option>
+              <option value="web">Página web</option>
+              <option value="app">Aplicación Android</option>
+              <option value="software">Software / programa</option>
+              <option value="otro">Otra cosa / no lo sé todavía</option>
+            </select>
+          </label>
+          <label>Cuéntame tu idea <span class="required">*</span>
+            <textarea name="mensaje" rows="7" placeholder="Cuéntame qué tienes en mente..." required></textarea>
+          </label>
+          <label class="check"><input type="checkbox" name="consentimiento" value="aceptado" required><span><b class="required">*</b> Acepto que OroStack utilice estos datos para responder a mi consulta.</span></label>
+          <button type="submit" class="btn btn-primary submit-btn">Enviar consulta <span>↗</span></button>
+          <p class="form-disclaimer"><span class="required">*</span> Campo obligatorio. Empresa es opcional.<br>La consulta se enviará directamente a OroStack sin abrir Outlook.</p>
+          <div class="form-success" id="formSuccess">¡Perfecto! Se ha preparado el correo con tu consulta.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom"><span>© 2026 OroStack</span><a href="../index.html">← Volver a OroStack</a></div>
+  </footer>
+  <script src="../js/main.js"></script>
+<script src="../js/contacto.js"></script>
+</body>
+</html>
