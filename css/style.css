@@ -563,3 +563,118 @@ button { cursor: pointer; }
     gap: 4px;
   }
 }
+
+/* ===== Nueva sección Sobre nosotros ===== */
+.team-heading { margin-bottom: 55px; }
+.team-heading > p { max-width: 520px; }
+.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.team-member { min-width: 0; }
+.team-portrait-card { height: 500px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(145deg, #18201e, #0d1219); overflow: hidden; position: relative; display: grid; place-items: center; }
+.team-photo { position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); width: 94%; height: 96%; object-fit: contain; object-position: center bottom; z-index: 1; filter: saturate(.96) contrast(1.02); }
+.team-photo-selena { width: 96%; height: 96%; bottom: -4px; }
+.team-copy { padding: 24px 4px 0; }
+.team-copy h3 { font-size: 30px; letter-spacing: -.05em; margin: 0 0 3px; }
+.team-role { color: var(--accent) !important; font-size: 10px !important; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; margin-bottom: 14px !important; }
+.team-copy > p:not(.team-role) { color: var(--muted); max-width: 560px; font-size: 13px; line-height: 1.75; }
+.team-copy .about-skills { margin-top: 22px; }
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: 1fr; gap: 55px; }
+  .team-portrait-card { height: 470px; }
+}
+@media (max-width: 680px) {
+  .team-portrait-card { height: 420px; }
+  .team-copy { padding-top: 20px; }
+  .team-copy h3 { font-size: 27px; }
+}
+
+/* ===== Packs para pequeños negocios ===== */
+.packs { background: #090d14; padding-top: 10px; }
+.packs-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.pack-card { padding: 30px; min-height: 310px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.018); display: flex; flex-direction: column; }
+.pack-card.pack-featured { border-color: rgba(215,255,63,.32); background: linear-gradient(145deg, rgba(215,255,63,.07), rgba(255,255,255,.018)); }
+.pack-tag { color: var(--accent); font-size: 9px; font-weight: 900; letter-spacing: .16em; }
+.pack-card h3 { margin: 18px 0 10px; font-size: 25px; line-height: 1.05; letter-spacing: -.045em; }
+.pack-card p { color: var(--muted); font-size: 12px; line-height: 1.65; }
+.pack-card ul { list-style: none; display: grid; gap: 9px; margin-top: auto; padding-top: 22px; }
+.pack-card li { color: #cbd2dc; font-size: 11px; padding-left: 18px; position: relative; }
+.pack-card li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 900; }
+.services-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .packs-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ===== Ajustes nueva orientación OroStack ===== */
+/* Servicios más anchos en escritorio, con más aire visual. */
+.services .container { width: min(1240px, calc(100% - 40px)); }
+.services-grid { max-width: none; gap: 20px; }
+.service-card { min-height: 500px; padding: 34px; }
+.service-card > a { left: 34px; }
+
+/* Presupuesto y CTA de los packs. */
+.pack-card { min-height: 365px; }
+.pack-price { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.pack-price small { color: #7f8998; font-size: 9px; text-transform: uppercase; letter-spacing: .14em; }
+.pack-price strong { color: #fff; font-size: 17px; letter-spacing: -.03em; }
+.pack-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; font-size: 11px; font-weight: 800; color: #fff; }
+.pack-link span { color: var(--accent); }
+@media (max-width: 1100px) {
+  .services .container { width: min(var(--max), calc(100% - 48px)); }
+}
+@media (max-width: 680px) {
+  .services .container { width: calc(100% - 48px); }
+  .service-card { min-height: 0; padding: 30px; }
+  .service-card > a { left: auto; }
+  .pack-card { min-height: 0; }
+}
+
+/* ===== Planes de redes y contenido ===== */
+.content-intro { max-width: 720px; margin-bottom: 42px; }
+.content-intro h2 { font-size: clamp(42px, 5vw, 68px); line-height: .95; letter-spacing: -.065em; margin: 14px 0 18px; }
+.content-intro h2 span { color: var(--accent); }
+.content-intro p { color: var(--muted); max-width: 620px; font-size: 14px; line-height: 1.7; }
+.content-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+.content-plan { padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.018); display: flex; flex-direction: column; min-height: 520px; }
+.content-plan.plan-featured { border-color: rgba(215,255,63,.34); background: linear-gradient(145deg, rgba(215,255,63,.07), rgba(255,255,255,.018)); }
+.content-plan .plan-tag { color: var(--accent); font-size: 9px; font-weight: 900; letter-spacing: .16em; }
+.content-plan h3 { margin: 18px 0 10px; font-size: 25px; line-height: 1.05; letter-spacing: -.045em; }
+.content-plan > p { color: var(--muted); font-size: 12px; line-height: 1.65; min-height: 40px; }
+.content-plan .detail-list { margin-top: 25px; gap: 10px; }
+.content-plan .detail-list li { font-size: 11px; }
+.plan-price { margin-top: auto; padding-top: 20px; margin-bottom: 18px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.plan-price small { color: #7f8998; font-size: 9px; text-transform: uppercase; letter-spacing: .14em; }
+.plan-price strong { color: #fff; font-size: 26px; letter-spacing: -.05em; }
+.plan-price em { font-size: 12px; color: #8e98a7; font-style: normal; font-weight: 500; margin-left: 3px; }
+.content-plan .btn { align-self: flex-start; }
+.plan-note { margin-top: 22px; color: #7f8998; font-size: 11px; line-height: 1.6; }
+@media (max-width: 1000px) { .content-plans { grid-template-columns: 1fr; } .content-plan { min-height: 0; } }
+
+/* V5 — packs: pricing and shorter hero titles */
+.pack-presencia-page .detail-hero h1 { font-size: clamp(43px, 5.2vw, 70px); }
+.pack-maintenance { border-top: 1px solid var(--line); padding-top: 18px; margin: 20px 0 22px; display: grid; gap: 5px; }
+.pack-maintenance span { color:#7f8998; font-size:9px; letter-spacing:.14em; }
+.pack-maintenance strong { font-size:28px; letter-spacing:-.05em; }
+.pack-maintenance small { color:#8e98a7; font-size:11px; }
+.active-pack-plans { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.active-pack-plan { padding:30px; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.018); display:flex; flex-direction:column; min-height:620px; }
+.active-pack-plan.plan-featured { border-color:rgba(215,255,63,.34); background:linear-gradient(145deg,rgba(215,255,63,.07),rgba(255,255,255,.018)); }
+.active-pack-plan .plan-tag { color:var(--accent); font-size:9px; font-weight:900; letter-spacing:.16em; }
+.active-pack-plan h3 { margin:18px 0 10px; font-size:25px; line-height:1.05; letter-spacing:-.045em; }
+.active-pack-plan > p { color:var(--muted); font-size:12px; line-height:1.65; min-height:40px; }
+.active-pack-plan .detail-list { margin-top:22px; gap:10px; }
+.active-pack-plan .detail-list li { font-size:11px; }
+.active-pack-plan .plan-price { margin-top:18px; padding-top:15px; border-top:1px solid var(--line); display:grid; grid-template-columns:auto 1fr; align-items:baseline; column-gap:12px; }
+.active-pack-plan .plan-price + .plan-price { margin-top:10px; }
+.active-pack-plan .plan-price small { color:#7f8998; font-size:8px; letter-spacing:.14em; }
+.active-pack-plan .plan-price strong { font-size:25px; letter-spacing:-.05em; }
+.active-pack-plan .plan-price span { grid-column:2; color:#8e98a7; font-size:10px; }
+.active-pack-plan .plan-price em { font-size:11px; color:#8e98a7; font-style:normal; font-weight:500; margin-left:3px; }
+.active-pack-plan .btn { margin-top:auto; align-self:flex-start; }
+.first-month-note { display:block; margin-top:10px; color:#7f8998; font-size:10px; line-height:1.5; }
+.pack-condition { color:#8e98a7; font-size:11px; line-height:1.6; margin:0 0 18px; }
+@media (max-width:1000px){ .active-pack-plans{grid-template-columns:1fr;} .active-pack-plan{min-height:0;} }
+@media (max-width:700px){ .pack-presencia-page .detail-hero h1{font-size:44px; line-height:.98;} }
